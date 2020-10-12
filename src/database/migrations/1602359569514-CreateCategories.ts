@@ -8,9 +8,10 @@ export default class CreateCategories1602359569514 implements MigrationInterface
         columns:[
           {
             name:'id',
-            type:'varchar',
+            type:'uuid',
             isPrimary:true,
-            generationStrategy:'uuid'
+            generationStrategy:'uuid',
+            default:'uuid_generate_v4()'
           },
           {
             name:'title',

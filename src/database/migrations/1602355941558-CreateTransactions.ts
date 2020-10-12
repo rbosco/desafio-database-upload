@@ -8,9 +8,10 @@ export default class CreateTransactions1602355941558 implements MigrationInterfa
             columns:[
                 {
                   name:'id',
-                  type:'varchar',
+                  type:'uuid',
                   isPrimary:true,
-                  generationStrategy:'uuid'
+                  generationStrategy:'uuid',
+                  default:'uuid_generate_v4()'
                 },
                 {
                   name:'title',

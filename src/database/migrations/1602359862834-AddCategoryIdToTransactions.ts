@@ -5,7 +5,7 @@ export class AddCategoryIdToTransactions1602359862834 implements MigrationInterf
     public async up(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.addColumn('transactions', new TableColumn({
         name:'category_id',
-        type:'varchar',
+        type:'uuid',
         isNullable:true
       }));
 
